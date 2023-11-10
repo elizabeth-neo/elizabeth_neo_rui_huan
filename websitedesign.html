@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="stylesheet/styleContactme.css">
+    <title>Portfolio</title>
+    <style>
+        .additional-content {
+            font-family: 'Lucida Calligraphy';
+            font-size: 24px;
+            text-align: center;
+            color: black; /* Adjust the color as needed */
+            position: absolute;
+            top: 250%; /* Adjust the top position */
+            left: 50%;
+            transform: translate(-50%, -50%); /* Adjust the transform */
+            width: 100%;
+        }
+       
+
+        .down-arrow-button {
+            position: absolute;
+            top: 130%; /* Adjust the top position */
+            left: 160%; /* Adjust the left position */
+            transform: translate(-50%, -50%);
+            padding: 30px; /* Adjust padding as needed */
+            display: inline-block;
+            position: relative;
+        }
+
+        .down-arrow {
+            transform: rotate(90deg);
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            border-top: 50px solid #333; /* Adjust arrow color as needed */
+        }
+    </style>
+</head>
+<body>
+        <div class="navbar">
+    <a href="index.html">Home</a>
+    <a href="aboutme.html">About Me</a>
+        <img src="Images/sun_logo.png" alt="Your Logo" class="logo"> <!-- Added the logo class -->
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contactme.html">Contact Me</a>
+    </div>
+
+    <div class="content">
+        <div class="video-container">
+            <video style="opacity:80%" id="background-video" controls autoplay loop muted>
+                <source src="Videos/production_id_5096858 (1080p).mp4" type="video/mp4">
+            </video>
+            <div style="font-family: 'Lucida Calligraphy'; font-size: 50px;">
+                <p style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -500%);"><u>Website Designs</u></p>
+            </div>
+          
+                            <div class="down-arrow-button">
+        <a href="portfolio.html"><div class="down-arrow"></div>
+            </a>
+        </div>
+            <div class="additional-content">
+                <img src="Images/website1.png" alt="Your Image">
+                <div style="font-family: Montserrat">
+                <p>This is my website attempt I made, using adobe illustrator,</p>
+                <p>during my Year 1 Semester 2 design module. This Graded</p>
+                <p>Assignment was about us designing our portfolio website.</p>
+                </div>
+                <img src="Images/website2.png" alt="Your Image" width="720">
+                <div style="font-family: Montserrat">
+                <p>This was created in my UI/UX lessons. The task was to create</p>
+                <p>a Hi-Fi wireframe of an adventure based website. It was my</p>
+                <p>first actual attempt to design the entire website in a Hi-Fi</p>
+                <p>wireframe.</p> 
+                </div>
+                <img src="Images/website3.png" alt="Your Image" width="720">
+                <div style="font-family: Montserrat">
+                <p>This website page was made with the intention to create an</p>
+                <p>unique user interaction experience. A puzzle piece at the</p>
+                <p>left side have to be picked  and it will show one of the</p>
+                <p>and it will show one of the website templates. </p>
+                                                <img src="Images/website4.png" alt="Your Image" width="720">
+                <div style="font-family: Montserrat">
+                <p>This movie based website the result of my graded assignments</p>
+                <p>for one of my lessons regarding HTML. This website was made</p>
+                <p>entirely out of HTML, CSS and PHP. Hence, is fully functional</p>
+                <p>as well.</p>
+                </div>
+                                                                <img src="Images/website5.png" alt="Your Image" width="720">
+                <div style="font-family: Montserrat">
+                <p>This supermarket website was made with the intention to</p>
+                <p>experiment with cards, grids and tables. HTML, CSS and</p>
+                <p>PHP was implemented here. This taught me to place items</p>
+                <p>neatly in rows.</p>
+                </div>
+            </div>
+    </div>
+    </div>
+    </div>
+
+    <script>
+        const logo = document.querySelector('.logo');
+        const navbar = document.querySelector('.navbar');
+        const link = document.querySelector('.navbar a');
+
+        logo.addEventListener('mouseover', () => {
+            logo.style.transform = 'rotate(360deg)';
+            navbar.style.backgroundColor = 'black';
+            navbar.style.color = 'white';
+        });
+
+        logo.addEventListener('mouseout', () => {
+            logo.style.transform = 'rotate(0deg)';
+            navbar.style.backgroundColor = 'white';
+            navbar.style.color = 'black';
+        });
+    </script>
+</body>
+</html>

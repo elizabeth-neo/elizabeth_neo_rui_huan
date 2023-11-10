@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="stylesheet/styleAboutme.css">
+        <title>About Me</title>
+        <style>
+            #mouse-follower {
+                position: absolute;
+            }
+
+            .additional-content {
+                font-family: 'Lucida Calligraphy';
+                font-size: 24px;
+                text-align: center;
+                color: #333; /* Adjust the color as needed */
+                position: absolute;
+                top: 300%; /* Adjust the top position */
+                left: 30%;
+                transform: translate(-50%, -50%); /* Adjust the transform */
+                width: 100%;
+            }
+
+            .aboutme-content{
+                padding-top: 20px;
+            }
+            
+            .aboutme-content-parts{
+                padding-top: 10px;
+            }
+            
+
+        </style>
+    </head>
+    <body>
+        <div class="navbar">
+            <a href="index.html">Home</a>
+            <a href="aboutme.html">About Me</a>
+            <img src="Images/sun_logo.png" alt="Your Logo" class="logo"> <!-- Added the logo class -->
+            <a href="portfolio.html">Portfolio</a>
+            <a href="contactme.html">Contact Me</a>
+        </div>
+        <div class="content">
+            <div class="video-container">
+                <video id="background-video" controls autoplay loop muted>
+                    <source src="Videos/sea_of_clouds (1080p).mp4" type="video/mp4">
+                </video>
+
+                <div style="font-family: 'Lucida Calligraphy'; font-size: 50px;">
+                    <h1 style="position: absolute; top: 40%; left: 30%; transform: translate(-50%, -50%);">About Me</h1>
+                </div>
+                <div style="font-family: 'Lucida Calligraphy'; font-size: 40px;">
+                    <p style="position: absolute; top: 53%; left: 30%; transform: translate(-50%, -50%);">Scroll Down</p>
+                </div>
+                <div class="additional-content">
+                    <div>
+                        <div class="aboutme-content" style="font-family: Montserrat">
+                            <h1 style="font-family: 'Lucida Calligraphy';">Interest & Hobbies</h1>
+                            <p>Having to cope through my studies, I have long forgotten my</p>
+                            <p>love and appreciation for the arts. In recent days, undergoing</p>
+                            <p>a diploma with the inclusion of design, reminds me of the old</p>
+                            <p>where I spend all day sketching whatever that popped in my</p>
+                            <p>head. This helped to relive my passion my passion for the arts</p>
+                            <p>yet once more. Along with the rise in technology, I've caught</p>
+                            <p>myself in investing a lot of time into games and media too.</p>
+                        </div>
+                        <div>
+
+                            <div class="aboutme-content" style="font-family: Montserrat">
+                                <div class="aboutme-content-parts">
+                                <h1 style="font-family: 'Lucida Calligraphy';">My Values</h1>
+                                <p>Some of the core values I hold close to me is open-mindedness</p>
+                                <p>and personal growth.</p>
+                                </div>
+                                <div class="aboutme-content-parts">
+                                <p>I believe that keeping an open mind and listening to other's</p>
+                                <p>point of view is important. This makes the other party feel</p>
+                                <p>feel listened and understood which can turn out to build a</p>
+                                <p>layer of trust. In addition, having a open mind can bring</p>
+                                <p>interesting topics and gain many insights.</p>
+                                </div>
+                                <div class="aboutme-content-parts">
+                                <p>Personal growth is a value that resonates a lot with me</p>
+                                <p>because the feeling of a sense of achievement rushes</p>
+                                <p>whenever I feel that I become a better version of myself.</p>
+                                <p>Every year I try to set a new goal for myself and work</p>
+                                <p>towards the goal. This way, I can move on with my life</p>
+                                <p>with my heads up.</p>
+                                </div></div>
+                            <div>
+                                <div class="aboutme-content" style="font-family: Montserrat">
+                                    <h1 style="font-family: 'Lucida Calligraphy';">My Skills</h1>
+                                    <div class="aboutme-content-parts">
+                                    <p>Technical Skills: </p>
+                                    <p>Programming (E.g. Python, Java, HTML, CSS, JS)</p>
+                                    <p>3D Modelling (E.g. Blender, Unity)</p>
+                                    <p>Adobe (E.g. Illustrator, Photoshop, XD)</p>
+                                    </div>
+                                    <div class="aboutme-content-parts">
+                                    <p>Critical Core Skills: </p>
+                                    <p>Teamwork: I believe good teamwork always brings the best</p>
+                                    <p>results. As normal human beings, mistakes are inevitable</p>
+                                    <p>and neither of us are perfect. Hence, as a team we can</p>
+                                    <p>remind and correct each other. This way we reduce human error. </p>
+                                    </div>
+                                    <div class="aboutme-content-parts">
+                                    <p>Problem Solving: Problem solving has been ingrained in my</p>
+                                    <p>roots. I found myself always including math in my life.</p>
+                                    <p>For example, during my school days, I've always chosen math</p>
+                                    <p>related subjects over the other. To add on, I love to code.</p>
+                                    <p>The feeling of successfully completing and fixing the code,</p>
+                                    <p>the results, gives such a great sense of accomplishment</p>
+                                    <p>and happiness.</p>
+                                    </div></div></div>
+                           
+                        </div>
+                    </div>
+                </div>
+                            <div class="image-container" style="margin-top: 330px;z-index: 100">
+                <img id="mouse-follower" src="Images/girl.png" alt="girl">
+            </div>
+            </div>
+        </div>
+        <script>
+            document.addEventListener('mousemove', (e) => {
+                const follower = document.getElementById('mouse-follower');
+
+                // Set the position of the follower to the mouse coordinates
+                follower.style.left = e.pageX + 'px';
+                follower.style.top = e.pageY + 'px';
+            });
+        </script>
+        <script>
+            const logo = document.querySelector('.logo');
+            const navbar = document.querySelector('.navbar');
+
+            logo.addEventListener('mouseover', () => {
+                logo.style.transform = 'rotate(360deg)';
+                navbar.style.backgroundColor = 'black';
+                navbar.style.color = 'white';
+            });
+
+            logo.addEventListener('mouseout', () => {
+                logo.style.transform = 'rotate(0deg)';
+                navbar.style.backgroundColor = 'white';
+                navbar.style.color = 'black';
+            });
+        </script>
+
+    </body>
+</html>
